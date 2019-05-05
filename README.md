@@ -18,7 +18,7 @@ export PYTHONPATH=$PYTHONPATH:{pwd}
 
 ### Test image
 
-You can download the pretrained model trained on supervisely person dataset in [baidu,passwrd:ytiv](https://pan.baidu.com/s/1b8buEocVXX9Lp0M7HDnguQ)
+You can download the pretrained model trained on supervisely person dataset in [baidu,passwd:ytiv](https://pan.baidu.com/s/1b8buEocVXX9Lp0M7HDnguQ)
 
 ```
 python demox.py
@@ -30,6 +30,7 @@ python demox.py
 python tools/train.py configs/supervisely.py --gpus 2 
 ```
 
-**Important**: you need to set the learning rate proportional to the GPU num. E.g., modify lr to 0.01 for 4 GPUs or 0.005 for 2 GPUs.
-
+**Important**: 
+* you need to set the learning rate proportional to the GPU num. E.g., modify lr to 0.01 for 4 GPUs or 0.005 for 2 GPUs.
+* In this repository, the pytorch version is 0.4.1
 
