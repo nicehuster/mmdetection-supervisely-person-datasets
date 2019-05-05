@@ -15,6 +15,26 @@ cd mmdetection-supervisely-person-datasets
 
 export PYTHONPATH=$PYTHONPATH:{pwd}
 ```
+### Data
+
+You can download supervisely person dataset from the [official website](https://supervise.ly/), after download the dataset, place it in data folder, and The dataset is structured as follows：
+```
+.
+├── ds1
+│   ├── ann
+│   └── img
+...
+├── ds11
+│   ├── ann
+│   └── img
+├── ds12
+│   ├── ann
+│   └── img
+├── ds13
+│   ├── ann
+│   └── img
+└── meta.json
+```
 
 ### Test image
 
