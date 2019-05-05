@@ -1,0 +1,4 @@
+{
+	"title": "Training data for segmentation",
+	"description": "Script augments input projects to prepare training dataset for segmentation (or instance segmentation) models"
+}

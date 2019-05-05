@@ -1,0 +1,4 @@
+{
+	"title": "Plot tags distribution",
+	"description": "Count image tags and plot distribution ( using SDK plus working with raw annotation in JSON format)"
+}

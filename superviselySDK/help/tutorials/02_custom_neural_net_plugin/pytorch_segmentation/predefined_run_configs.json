@@ -1,0 +1,62 @@
+[
+  {
+    "title": "train",
+    "type": "train",
+    "config": {
+      "input_size": {
+        "width": 256,
+        "height": 256
+      },
+      "batch_size": {
+        "train": 12,
+        "val": 12
+      },
+      "dataset_tags": {
+        "train": "train",
+        "val": "val"
+      },
+      "epochs": 3,
+      "val_every": 0.5,
+      "lr": 0.001,
+      "weights_init_type": "transfer_learning"
+    }
+  },
+  {
+    "title": "full_image",
+    "type": "inference",
+    "config": {
+      "model": {
+      },
+      "mode": {
+        "name": "full_image",
+        "model_classes": {
+          "save_classes": "__all__",
+          "add_suffix": "_pytorch_segm_example"
+        }
+      }
+    }
+  },
+  {
+    "title": "roi",
+    "type": "inference",
+    "config": {
+      "model": {
+      },
+      "mode": {
+        "name": "roi",
+        "bounds": {
+          "left": "10%",
+          "top": "30%",
+          "right": "10%",
+          "bottom": "10%"
+        },
+        "save": false,
+        "class_name": "inference_roi",
+        "model_classes": {
+          "save_classes": "__all__",
+          "add_suffix": "_pytorch_segm_example"
+        }
+      }
+    }
+  }
+]

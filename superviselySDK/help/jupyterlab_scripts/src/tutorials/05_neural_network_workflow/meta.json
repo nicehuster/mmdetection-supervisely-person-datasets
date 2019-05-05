@@ -1,0 +1,4 @@
+{
+	"title": "Guide #05: custom neural network workflow",
+	"description": "How to run plugins (DTL/train/inference) from code to organize and automate custom workflow: training data preparation -> training -> inference"
+}

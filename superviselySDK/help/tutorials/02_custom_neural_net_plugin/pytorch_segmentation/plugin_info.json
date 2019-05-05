@@ -1,0 +1,5 @@
+{
+	"title": "Supervisely PyTorch Segmentation Example",
+	"description": "Example integration of a very simple PyTorch segmentation neural net into Supervisely framework.",
+	"type": "architecture"
+}

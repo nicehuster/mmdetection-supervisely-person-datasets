@@ -1,0 +1,118 @@
+[
+  {
+    "dst": "$sample",
+    "src": [
+      "%SRC_PROJECT_NAME%/*"
+    ],
+    "action": "data",
+    "settings": {
+      "classes_mapping": "default"
+    }
+  },
+  {
+    "dst": "$fv",
+    "src": [
+      "$sample"
+    ],
+    "action": "flip",
+    "settings": {
+      "axis": "vertical"
+    }
+  },
+  {
+    "dst": "$data",
+    "src": [
+      "$fv",
+      "$sample"
+    ],
+    "action": "dummy",
+    "settings": {}
+  },
+  {
+    "dst": "$data2",
+    "src": [
+      "$data"
+    ],
+    "action": "multiply",
+    "settings": {
+      "multiply": 5
+    }
+  },
+  {
+    "dst": "$data3",
+    "src": [
+      "$data2"
+    ],
+    "action": "crop",
+    "settings": {
+      "random_part": {
+        "width": {
+          "max_percent": 90,
+          "min_percent": 70
+        },
+        "height": {
+          "max_percent": 90,
+          "min_percent": 70
+        },
+        "keep_aspect_ratio": false
+      }
+    }
+  },
+  {
+    "dst": [
+      "$totrain",
+      "$toval"
+    ],
+    "src": [
+      "$data3",
+      "$data"
+    ],
+    "action": "if",
+    "settings": {
+      "condition": {
+        "probability": 0.85
+      }
+    }
+  },
+  {
+    "dst": "$train",
+    "src": [
+      "$totrain"
+    ],
+    "action": "tag",
+    "settings": {
+      "tag": "train",
+      "action": "add"
+    }
+  },
+  {
+    "dst": "$val",
+    "src": [
+      "$toval"
+    ],
+    "action": "tag",
+    "settings": {
+      "tag": "val",
+      "action": "add"
+    }
+  },
+  {
+    "dst": "$data_with_bg",
+    "src": [
+      "$train",
+      "$val"
+    ],
+    "action": "background",
+    "settings": {
+      "class": "bg"
+    }
+  },
+  {
+    "dst": "%DST_PROJECT_NAME%",
+    "src": [
+      "$data_with_bg"
+    ],
+    "action": "supervisely",
+    "settings": {}
+  }
+]
