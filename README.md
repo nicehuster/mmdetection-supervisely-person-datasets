@@ -8,10 +8,19 @@ We used mmdetection(mask rcnn) to train supervisely person dataset.
 
 ### Installation
 
+#### Requirements
+- Ubuntu 16.04 
+- Python 3.4+
+- PyTorch 0.4.1
+- Cython
+
+
 ```shell
 git clone https://github.com/nicehuster/mmdetection-supervisely-person-datasets.git
 
 cd mmdetection-supervisely-person-datasets
+
+bash compile.sh
 
 export PYTHONPATH=$PYTHONPATH:{pwd}
 ```
