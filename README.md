@@ -22,6 +22,12 @@ cd mmdetection-supervisely-person-datasets
 
 bash compile.sh
 
+# run setup
+python setup.py install 
+
+# or install locally
+python setup.py install --user
+
 export PYTHONPATH=$PYTHONPATH:{pwd}
 ```
 ### Data
