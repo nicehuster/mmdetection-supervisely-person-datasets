@@ -32,7 +32,7 @@ export PYTHONPATH=$PYTHONPATH:{pwd}
 ```
 ### Data
 
-You can download supervisely person dataset from the [official website](https://supervise.ly/), after download the dataset, place it in data folder, and The dataset is structured as follows：
+You can download supervisely person dataset from the [official website](https://supervise.ly/), or you can download from baiduyun(链接: https://pan.baidu.com/s/1EsXXlEvA_tAkLv1vqgPEKA 提取码: xrm9) after download the dataset, place it in data folder, and The dataset is structured as follows：
 ```
 .
 ├── ds1
